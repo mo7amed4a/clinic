@@ -1,0 +1,446 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:slnt,wght@-11..11,200..1000&display=swap");
+
+.font-cairo {
+  font-family: "Cairo", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+/* Chrome, Edge, Safari */
+/* WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Track color (can be lighter for better contrast) */
+}
+::-webkit-scrollbar-button {
+  display: none !important; /* Hides the up/down or left/right arrows */
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #1a76d1,
+    #000
+  ); /* Gradient for the thumb */
+  border-radius: 8px; /* Rounded scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #000, #1a76d1);
+}
+
+/* Custom text selection */
+::selection {
+  background-color: #1a76d1;
+  color: #fff;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1a76d1 transparent;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* Import all GhaithSans font files */
+/* @font-face {
+  font-family: "GHAITHSANS";
+  src: url("../public/fonts/GHAITHSANS-BLACK.OTF") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GHAITHSANS";
+  src: url("../public/fonts/GHAITHSANS-BOLD.OTF") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GHAITHSANS";
+  src: url("../public/fonts/GHAITHSANS-EXTRABOLD.OTF") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GHAITHSANS";
+  src: url("../public/fonts/GHAITHSANS-EXTRALIGHT.OTF") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GHAITHSANS";
+  src: url("../public/fonts/GHAITHSANS-LIGHT.OTF") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GHAITHSANS";
+  src: url("../public/fonts/GHAITHSANS-MEDIUM.OTF") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GHAITHSANS";
+  src: url("../public/fonts/GHAITHSANS-REGULAR.OTF") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GHAITHSANS";
+  src: url("../public/fonts/GHAITHSANS-SEMIBOLD.OTF") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GHAITHSANS";
+  src: url("../public/fonts/GHAITHSANS-THIN.OTF") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+} */
+* {
+  font-family: "GHAITHSANS", sans-serif !important;
+}
+body {
+  background-color: #f8f8f8 !important;
+}
+
+main {
+  margin: auto;
+  /* width: 90%; */
+  /* max-width: 88rem; */
+}
+
+.liner {
+  background-image: linear-gradient(
+    to left,
+    rgba(11, 12, 12, 0.19),
+    rgba(8, 23, 26, 0.85)
+  );
+}
+.panel {
+  @apply relative rounded-md bg-panel border border-gray-300;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(161, 161, 161, 0.067),
+    -0.1rem -0.1rem 1rem rgba(187, 187, 187, 0.067);
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+/* Custom Swiper Navigation Buttons */
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  /* Use auto width and height */
+  width: auto;
+  height: auto;
+}
+
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after {
+  /* Custom styles for the next/prev button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: black;
+  background-color: #f5f5f5;
+  /cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.swiper .swiper-button-next:hover::after,
+.swiper .swiper-button-prev:hover::after {
+  background-color: #3b82f6; /* Tailwind primary color */
+  color: white;
+}
+
+.swiper .swiper-button-next::after {
+  padding-left: 0.1rem;
+}
+
+/* Custom Swiper Pagination Styles */
+.swiper .swiper-pagination {
+  padding-top: 0.25rem; /* Equivalent to Tailwind py-1 */
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  background: none;
+  opacity: 1;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+.active {
+  @apply bg-primary-light text-primary;
+}
+
+.head {
+  @apply w-full px-5 py-4 flex justify-start items-center gap-3 border-b bg-primary-light/40;
+
+  p {
+    @apply font-semibold text-gray-950 text-[1.1rem] tracking-wide cursor-default select-none;
+  }
+}
+.quill-content {
+  @apply text-[.95rem] text-gray-800 pt-5 pb-8 px-8 cursor-default;
+
+  p {
+    @apply py-1.5 text-[1rem] font-semibold text-gray-950 leading-8 tracking-wide;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-gray-800 font-bold py-2 tracking-wide;
+  }
+  h1 {
+    @apply text-[1.1rem];
+  }
+  h2 {
+    @apply text-[1rem];
+  }
+  h3 {
+    @apply text-[1rem];
+  }
+  h4 {
+    @apply text-[1rem];
+  }
+  h5 {
+    @apply text-[1rem];
+  }
+  h6 {
+    @apply text-[1rem];
+  }
+  a {
+    @apply text-primary hover:opacity-[.8] hover:underline;
+  }
+  img,
+  video {
+    @apply rounded-md max-w-full max-h-[20rem] my-[.5rem];
+  }
+  ul {
+    padding: 0.5rem 1rem;
+    li {
+      list-style-type: disc;
+      @apply text-[1rem] font-semibold text-gray-950 leading-7 tracking-wide mb-2;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+input:focus {
+  outline: none !important;
+}
+.pattern {
+  animation: moving 30s linear infinite;
+}
+@keyframes moving {
+  0% {
+    background-position-x: 0px;
+  }
+
+  100% {
+    background-position-x: 2000px;
+  }
+}
+/* Apply animation to the element */
+
+@keyframes shine {
+  0% {
+    color: #ffa500; /* Starting color */
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+  }
+  50% {
+    color: #ffd700; /* Brighter color */
+    text-shadow: 0 0 20px #ffa500, 0 0 30px #ffa500, 0 0 40px #ffa500;
+  }
+  100% {
+    color: #ffa500; /* Back to starting color */
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+  }
+}
+.sun-icon {
+  animation: rotate 10s linear infinite, shine2 2s ease-in-out infinite;
+  -webkit-animation: rotate 10s linear infinite, shine2 2s ease-in-out infinite;
+}
+
+/* Rotation animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shining effect animation */
+@keyframes shine2 {
+  0%,
+  100% {
+    fill: #ffa500;
+    stroke: #ffa500;
+    filter: drop-shadow(0 0 10px #ffd700) drop-shadow(0 0 20px #ffd700);
+  }
+  50% {
+    fill: #ffd700;
+    stroke: #ffd700;
+    filter: drop-shadow(0 0 20px #ffa500) drop-shadow(0 0 30px #ffa500);
+  }
+}
+.moon-icon {
+  animation: shine 3s ease-in-out infinite;
+  -webkit-animation: shine 3s ease-in-out infinite;
+}
+
+/* Shining effect animation */
+@keyframes shine {
+  0%,
+  100% {
+    fill: #d8d8d8; /* Soft silver-gray for the moon */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8))
+      drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  }
+  50% {
+    fill: #f0f0f0; /* Slightly lighter color for the moon */
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1))
+      drop-shadow(0 0 25px rgba(255, 255, 255, 0.7));
+  }
+}
+.arrow-icon {
+  animation: moveArrow 2s infinite alternate; /* Apply the animation */
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
